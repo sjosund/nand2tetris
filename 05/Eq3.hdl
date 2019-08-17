@@ -1,0 +1,12 @@
+CHIP Eq3 {
+    IN a[3], b[3];
+    OUT out;
+
+    PARTS:
+    Eq(a=a[0], b=b[0], out=out1);
+    Eq(a=a[1], b=b[1], out=out2);
+    Eq(a=a[2], b=b[2], out=out3);
+
+    And(a=out1, b=out2, out=out4);
+    And(a=out3, b=out4, out=out);
+}
